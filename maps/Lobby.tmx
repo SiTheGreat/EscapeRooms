@@ -4,6 +4,7 @@
   <property name="DayTiles" value="Front 7 1 256 Front 7 2 288"/>
   <property name="Doors" value="11 9 1 120 20 9 1 120 3 16 1 824 4 16 1 825"/>
   <property name="NightTiles" value="Front 7 1 1253 Front 7 2 1285"/>
+  <property name="Pathoschild.CentralStation_TicketMachine" value="5 11 Train"/>
   <property name="Warp" value="14 25 Town 45 71"/>
  </properties>
  <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">

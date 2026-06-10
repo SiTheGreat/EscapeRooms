@@ -10,12 +10,12 @@
 	},
 	"Dependencies": [
 		{
-		"UniqueID": "spacechase0.SpaceCore",
-		"IsRequired": false
+		"UniqueID": "Pathoschild.CentralStation",
+		"IsRequired": true
 		},
 		{
-		"UniqueID": "ichortower.SecretNoteFramework",
-		"IsRequired": false
-		},		
+		"UniqueID": "spacechase0.SpaceCore",
+		"IsRequired": true
+		},	
 	]
 }
