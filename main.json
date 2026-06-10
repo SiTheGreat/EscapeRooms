@@ -1,0 +1,82 @@
+{
+
+	// Content //////////////////////////////////////////////////////////
+
+	"Changes": [
+
+		// Ticket Shop
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Lobby",
+			"MapTiles": [
+				{
+					"Position": { "X": 12, "Y": 5 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_TicketShop none 600 2600 12 5 1 1"
+					}
+				},
+			],
+		},
+
+		{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"Entries": {
+			"{{ModId}}_TicketShop": {
+				"Id": "{{ModId}}_TicketShop",
+				"Owners": [
+					{
+						"Id": "{{ModId}}_Open",
+						"Name": "AnyOrNone",
+						"Dialogues": [],
+						"Condition": "TIME 600 2600",
+					},
+				],
+				"Items": [
+					{
+						"Id": "{{ModId}}_Coffee",
+						"ItemId": "(O)395",
+						"AvailableStock": 2,
+					},
+				],
+			},
+		}
+	},
+
+		// Lobby Map Load
+
+		// Sky Map
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Lobby",
+			"FromFile": "maps/Lobby.tmx",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"Entries": {
+				"{{ModId}}_Lobby": {
+					"DisplayName": "Escape Room Lobby",						
+					"CreateOnLoad": { 
+						"MapPath": "Maps/{{ModId}}_Lobby" 
+					},
+					"DefaultArrivalTile": {
+						"X": 5,
+						"Y": 9
+					},
+					"MusicDefault": "jaunty",
+				},
+			},
+		},
+
+		// Central Station
+
+		// Rooms //////////////////////////////////////////////////////////
+
+	// End //////////////////////////////////////////////////////////
+
+	]
+
+}
