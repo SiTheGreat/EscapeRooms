@@ -1,0 +1,21 @@
+{
+	"Name": "[Si] Escape Rooms",
+	"Author": "SiTheGreat",
+	"Description": "Escape Rooms!",
+	"Version": "1.0.0",
+	"UniqueID": "Si.ER",
+	"UpdateKeys": [ "Nexus:" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"Dependencies": [
+		{
+		"UniqueID": "spacechase0.SpaceCore",
+		"IsRequired": false
+		},
+		{
+		"UniqueID": "ichortower.SecretNoteFramework",
+		"IsRequired": false
+		},		
+	]
+}
