@@ -11,11 +11,15 @@
 	"Dependencies": [
 		{
 		"UniqueID": "Pathoschild.CentralStation",
-		"IsRequired": true
+		"IsRequired": false
 		},
 		{
 		"UniqueID": "spacechase0.SpaceCore",
 		"IsRequired": true
-		},	
+		},
+		{
+		"UniqueID": "Spiderbuttons.BETAS",
+		"IsRequired": true
+		},
 	]
 }

@@ -25,7 +25,7 @@
 						"X": 5,
 						"Y": 9
 					},
-					"MusicDefault": "jaunty",
+					// "MusicDefault": "jaunty",
 				},
 			},
 		},
@@ -57,7 +57,6 @@
 							"Id": "{{ModId}}_Open",
 							"Name": "AnyOrNone",
 							"Dialogues": [],
-							"Condition": "TIME 600 2600",
 						},
 					],
 					"Items": [
@@ -72,6 +71,12 @@
 		},
 
 		// Rooms //////////////////////////////////////////////////////////
+
+		// Maze Room
+		{
+			"Action": "Include",
+			"FromFile": "rooms/MazeRoom.json",
+		},
 
 	// End //////////////////////////////////////////////////////////
 

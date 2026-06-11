@@ -1,0 +1,119 @@
+{
+
+	// Content //////////////////////////////////////////////////////////
+
+	"Changes": [
+
+		// Ticket //////////////////////////////////////////////////////////
+		{
+			"Action": "Load",
+			"FromFile": "rooms/MazeRoomTicket.png",
+			"Target": "Mods/{{ModId}}/MazeRoomTicket",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_MazeRoomTicket": {
+					"Name": "{{ModId}}_MazeRoomTicket",
+					"DisplayName": "Maze Room Ticket",
+					"Description": "a ticket to the Maze Escape Room.",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 150,
+					"Texture": "Mods/{{ModId}}/MazeRoomTicket",
+					"SpriteIndex": 0,
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "{{ModId}}_TicketShop", "Items" ],
+			"Entries": {
+				"{{ModId}}_MazeRoomTicket": {
+					"Id": "{{ModId}}_MazeRoomTicket",
+					"ItemId": "{{ModId}}_MazeRoomTicket",
+				},
+			},
+		},
+
+		// Map //////////////////////////////////////////////////////////
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_MazeRoom",
+			"FromFile": "maps/MazeRoom.tmx",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"Entries": {
+				"{{ModId}}_MazeRoom": {
+					"DisplayName": "The A-MAZE-ing Maze!",						
+					"CreateOnLoad": { 
+						"MapPath": "Maps/{{ModId}}_MazeRoom" 
+					},
+					"DefaultArrivalTile": {
+						"X": 9,
+						"Y": 9
+					},
+					// "MusicDefault": "jaunty",
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"Entries": {
+				"{{ModId}}_MazeRoomInfo": "The A-MAZE-ing Maze!",
+				"{{ModId}}_MazeRoomTicketMissing": "You don't have the right ticket for the Maze Room!",
+			},
+		},
+
+		// Warps //////////////////////////////////////////////////////////
+		{
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModId}}_MazeRoomEntry": {
+					"Id": "{{ModId}}_MazeRoomEntry",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MazeRoomTicket ## Spiderbuttons.BETAS_WarpFarmer {{ModId}}_MazeRoom 9 9 0 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MazeRoomTicketMissing",
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MazeRoomTicket ## RemoveItem (O){{ModId}}_MazeRoomTicket 1",
+					]
+				},
+			},
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Lobby",
+			"MapTiles": [
+				{
+					"Position": { "X": 3, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MazeRoomEntry"
+					}
+				},
+				{
+					"Position": { "X": 5, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MazeRoomInfo"
+					}
+				},
+			],
+		},
+
+		// Reward Shop //////////////////////////////////////////////////////////
+
+		// Puzzles //////////////////////////////////////////////////////////
+		// Not needed for Maze Room
+
+	// End //////////////////////////////////////////////////////////
+
+	]
+
+}
