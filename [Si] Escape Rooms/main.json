@@ -61,7 +61,7 @@
 					],
 					"Items": [
 						{
-							"Id": "{{ModId}}_Coffee",
+							"Id": "{{ModId}}_TicketShopCoffee",
 							"ItemId": "(O)395",
 							"AvailableStock": 2,
 						},

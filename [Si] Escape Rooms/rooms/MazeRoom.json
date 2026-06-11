@@ -104,10 +104,43 @@
 						"Action": "Message {{ModId}}_MazeRoomInfo"
 					}
 				},
+				// {
+				// 	"Position": { "X": 12, "Y": 5 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MazeRoomRewardShop none 600 2600 12 5 1 1"
+				// 	}
+				// },
 			],
 		},
 
 		// Reward Shop //////////////////////////////////////////////////////////
+		// Make A-MAZE-D! poster
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Entries": {
+				"{{ModId}}_MazeRoomRewardShop": {
+					"Id": "{{ModId}}_MazeRoomRewardShop",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomRewardShopCake",
+							"ItemId": "(O)223",
+							"AvailableStock": 5,
+							"Price": 0,
+						},
+						// Add poster
+					],
+				},
+			}
+		},
 
 		// Puzzles //////////////////////////////////////////////////////////
 		// Not needed for Maze Room
