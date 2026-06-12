@@ -2,7 +2,7 @@
 	"Name": "[Si] Escape Rooms",
 	"Author": "SiTheGreat",
 	"Description": "Escape Rooms!",
-	"Version": "0.1.0",
+	"Version": "0.1.1",
 	"UniqueID": "Si.ER",
 	"UpdateKeys": [ "Nexus:" ],
 	"ContentPackFor": {
