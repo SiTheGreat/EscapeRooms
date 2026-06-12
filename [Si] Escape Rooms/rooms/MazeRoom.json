@@ -4,7 +4,7 @@
 
 	"Changes": [
 
-		// Ticket //////////////////////////////////////////////////////////
+		// Items //////////////////////////////////////////////////////////
 		{
 			"Action": "Load",
 			"FromFile": "rooms/MazeRoomTicket.png",
@@ -16,8 +16,8 @@
 			"Entries": {
 				"{{ModId}}_MazeRoomTicket": {
 					"Name": "{{ModId}}_MazeRoomTicket",
-					"DisplayName": "Maze Room Ticket",
-					"Description": "a ticket to the Maze Escape Room.",
+					"DisplayName": "{{i18n:Si.ER.MazeRoom.ticket.name}}",
+					"Description": "{{i18n:Si.ER.MazeRoom.ticket.desc}}",
 					"Type": "asdf",
 					"Category": 0,
 					"Price": 150,
@@ -38,6 +38,20 @@
 			},
 		},
 
+		// Poster
+		{
+			"Action": "Load",
+			"FromFile": "rooms/MazeRoomPoster.png",
+			"Target": "Mods/{{ModId}}/MazeRoomPoster",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Furniture",
+			"Entries": {
+				"{{ModId}}_MazeRoomPoster": "{{ModId}}_MazeRoomPoster/painting/1 2/1 2/1/100/-1/{{i18n:Si.ER.MazeRoom.poster.name}}/0/Mods\\{{ModId}}\\MazeRoomPoster/true",
+			},
+		},
+
 		// Map //////////////////////////////////////////////////////////
 		{
 			"Action": "Load",
@@ -49,7 +63,7 @@
 			"Target": "Data/Locations",
 			"Entries": {
 				"{{ModId}}_MazeRoom": {
-					"DisplayName": "The Library Labyrinth",						
+					"DisplayName": "{{i18n:Si.ER.MazeRoom.room.name}}",						
 					"CreateOnLoad": { 
 						"MapPath": "Maps/{{ModId}}_MazeRoom" 
 					},
@@ -57,7 +71,7 @@
 						"X": 9,
 						"Y": 9
 					},
-					// "MusicDefault": "jaunty",
+					"MusicDefault": "libraryTheme",
 				},
 			},
 		},
@@ -65,8 +79,8 @@
 			"Action": "EditData",
 			"Target": "Strings/StringsFromMaps",
 			"Entries": {
-				"{{ModId}}_MazeRoomInfo": "The Library Labyrinth",
-				"{{ModId}}_MazeRoomTicketMissing": "You don't have the right ticket for the Library Labyrinth!",
+				"{{ModId}}_MazeRoomInfo": "{{i18n:Si.ER.MazeRoom.room.name}}",
+				"{{ModId}}_MazeRoomTicketMissing": "{{i18n:Si.ER.MazeRoom.ticket.denied}}",
 			},
 		},
 
@@ -159,8 +173,7 @@
 			],
 		},
 
-		// Reward Shop //////////////////////////////////////////////////////////
-		// Make A-MAZE-D! poster
+		// Reward Shops //////////////////////////////////////////////////////////
 		{
 			"Action": "EditData",
 			"Target": "Data/Shops",
@@ -176,13 +189,19 @@
 					],
 					"Items": [
 						{
-							"Id": "{{ModId}}_MazeRoomRewardShopCake",
+							"Id": "{{ModId}}_MazeRoomRewardShopCookies",
 							"ItemId": "(O)223",
 							"AvailableStock": 5,
 							"Price": 0,
 							"AvailableStockLimit": "Player",
 						},
-						// Add poster
+						{
+							"Id": "{{ModId}}_MazeRoomRewardShopPoster",
+							"ItemId": "(F){{ModId}}_MazeRoomPoster",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
 					],
 				},
 				"{{ModId}}_MazeRoomPrize1": {
@@ -303,7 +322,7 @@
 		},
 
 		// Puzzles //////////////////////////////////////////////////////////
-		// Not needed for Maze Room
+		// None for Maze Room
 
 	// End //////////////////////////////////////////////////////////
 

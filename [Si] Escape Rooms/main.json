@@ -25,7 +25,7 @@
 						"X": 5,
 						"Y": 9
 					},
-					// "MusicDefault": "jaunty",
+					// "MusicDefault": "Hospital_Ambient",
 				},
 			},
 		},
@@ -64,6 +64,7 @@
 							"Id": "{{ModId}}_TicketShopCoffee",
 							"ItemId": "(O)395",
 							"AvailableStock": 2,
+							"AvailableStockLimit": "Player",
 						},
 					],
 				},

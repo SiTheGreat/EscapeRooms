@@ -1,4 +1,9 @@
 {
 	"Si.ER.name": "Escape Rooms",
-	"Si.ER.MazeDenied": "You don't have the right ticket for the Maze Room!",
+	// Maze Room
+	"Si.ER.MazeRoom.room.name": "The Library Labyrinth",
+	"Si.ER.MazeRoom.ticket.name": "Library Labyrinth Ticket",
+	"Si.ER.MazeRoom.ticket.desc": "A ticket to the Library Labyrinth escape room.",
+	"Si.ER.MazeRoom.ticket.denied": "You don't have the right ticket for the Maze Room!",
+	"Si.ER.MazeRoom.poster.name": "Reading is A-MAZE-ing!",
 }
