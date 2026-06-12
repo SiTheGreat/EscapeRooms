@@ -4,8 +4,7 @@
 
 	"Changes": [
 
-		// Lobby Map Load //////////////////////////////////////////////////////////
-		// Central Station warp is in tmx file map properties
+		// Lobby Map //////////////////////////////////////////////////////////
 
 		{
 			"Action": "Load",
@@ -25,8 +24,29 @@
 						"X": 5,
 						"Y": 9
 					},
-					// "MusicDefault": "Hospital_Ambient",
+					"MusicDefault": "springtown",
 				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Pathoschild.CentralStation/Stops",
+			"Entries": {
+				"{{ModId}}_Lobby": {
+					"DisplayName": "{{i18n:Si.ER.name}}",
+					"Network": "Train",
+					"ToLocation": "{{ModId}}_Lobby",
+					"ToTile": { "X": 5, "Y": 10 },
+					"ToFacingDirection": "Up",
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"Entries": {
+				"{{ModId}}_ExitDoor": "{{i18n:Si.ER.door.exit}}",
+				"{{ModId}}_ComingSoon": "{{i18n:Si.ER.door.upcoming}}",
 			},
 		},
 
@@ -36,6 +56,27 @@
 			"Action": "EditMap",
 			"Target": "Maps/{{ModId}}_Lobby",
 			"MapTiles": [
+				{
+					"Position": { "X": 8, "Y": 3 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_ExitDoor"
+					}
+				},
+				{
+					"Position": { "X": 8, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_ComingSoon"
+					}
+				},
+				{
+					"Position": { "X": 15, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_ComingSoon"
+					}
+				},
 				{
 					"Position": { "X": 12, "Y": 5 },
 					"Layer": "Buildings",

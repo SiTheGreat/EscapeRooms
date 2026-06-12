@@ -2,7 +2,7 @@
 	"Name": "[Si] Escape Rooms",
 	"Author": "SiTheGreat",
 	"Description": "Escape Rooms!",
-	"Version": "1.0.0",
+	"Version": "0.1.0",
 	"UniqueID": "Si.ER",
 	"UpdateKeys": [ "Nexus:" ],
 	"ContentPackFor": {
@@ -11,7 +11,7 @@
 	"Dependencies": [
 		{
 		"UniqueID": "Pathoschild.CentralStation",
-		"IsRequired": false
+		"IsRequired": true
 		},
 		{
 		"UniqueID": "spacechase0.SpaceCore",

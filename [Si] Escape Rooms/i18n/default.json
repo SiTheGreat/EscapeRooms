@@ -1,9 +1,11 @@
 {
 	"Si.ER.name": "Escape Rooms",
+	"Si.ER.door.exit": "This door is the exit from the escape rooms.",
+	"Si.ER.door.upcoming": "Coming soon!",
 	// Maze Room
 	"Si.ER.MazeRoom.room.name": "The Library Labyrinth",
 	"Si.ER.MazeRoom.ticket.name": "Library Labyrinth Ticket",
 	"Si.ER.MazeRoom.ticket.desc": "A ticket to the Library Labyrinth escape room.",
-	"Si.ER.MazeRoom.ticket.denied": "You don't have the right ticket for the Maze Room!",
+	"Si.ER.MazeRoom.ticket.denied": "You don't have the right ticket for the Library Labyrinth!",
 	"Si.ER.MazeRoom.poster.name": "Reading is A-MAZE-ing!",
 }
