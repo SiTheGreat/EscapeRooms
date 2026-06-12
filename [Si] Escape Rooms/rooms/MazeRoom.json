@@ -49,7 +49,7 @@
 			"Target": "Data/Locations",
 			"Entries": {
 				"{{ModId}}_MazeRoom": {
-					"DisplayName": "The A-MAZE-ing Maze!",						
+					"DisplayName": "The Library Labyrinth",						
 					"CreateOnLoad": { 
 						"MapPath": "Maps/{{ModId}}_MazeRoom" 
 					},
@@ -65,12 +65,12 @@
 			"Action": "EditData",
 			"Target": "Strings/StringsFromMaps",
 			"Entries": {
-				"{{ModId}}_MazeRoomInfo": "The A-MAZE-ing Maze!",
-				"{{ModId}}_MazeRoomTicketMissing": "You don't have the right ticket for the Maze Room!",
+				"{{ModId}}_MazeRoomInfo": "The Library Labyrinth",
+				"{{ModId}}_MazeRoomTicketMissing": "You don't have the right ticket for the Library Labyrinth!",
 			},
 		},
 
-		// Warps //////////////////////////////////////////////////////////
+		// Actions //////////////////////////////////////////////////////////
 		{
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
@@ -90,27 +90,72 @@
 			"Action": "EditMap",
 			"Target": "Maps/{{ModId}}_Lobby",
 			"MapTiles": [
+				// Door
 				{
-					"Position": { "X": 3, "Y": 23 },
+					"Position": { "X": 3, "Y": 15 },
 					"Layer": "Buildings",
 					"SetProperties": {
 						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MazeRoomEntry"
 					}
 				},
+				// Room Info
 				{
-					"Position": { "X": 5, "Y": 15 },
+					"Position": { "X": 4, "Y": 15 },
 					"Layer": "Buildings",
 					"SetProperties": {
 						"Action": "Message {{ModId}}_MazeRoomInfo"
 					}
 				},
-				// {
-				// 	"Position": { "X": 12, "Y": 5 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MazeRoomRewardShop none 600 2600 12 5 1 1"
-				// 	}
-				// },
+				// Prize Tiles
+				{
+					"Position": { "X": 43, "Y": 4 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomRewardShop none 600 2600 43 4 1 1"
+					}
+				},
+				{
+					"Position": { "X": 98, "Y": 101 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomPrize1 none 600 2600 98 101 1 1"
+					}
+				},
+				{
+					"Position": { "X": 57, "Y": 76 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomPrize2 none 600 2600 57 76 1 1"
+					}
+				},
+				{
+					"Position": { "X": 33, "Y": 76 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomPrize3 none 600 2600 33 76 1 1"
+					}
+				},
+				{
+					"Position": { "X": 2, "Y": 28 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomPrize4 none 600 2600 2 28 1 1"
+					}
+				},
+				{
+					"Position": { "X": 21, "Y": 5 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomPrize5 none 600 2600 21 5 1 1"
+					}
+				},
+				{
+					"Position": { "X": 56, "Y": 5 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MazeRoomPrize6 none 600 2600 56 5 1 1"
+					}
+				},
 			],
 		},
 
@@ -135,8 +180,123 @@
 							"ItemId": "(O)223",
 							"AvailableStock": 5,
 							"Price": 0,
+							"AvailableStockLimit": "Player",
 						},
 						// Add poster
+					],
+				},
+				"{{ModId}}_MazeRoomPrize1": {
+					"Id": "{{ModId}}_MazeRoomPrize1",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomPrize1",
+							"ItemId": "(O)395",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+					],
+				},
+				"{{ModId}}_MazeRoomPrize2": {
+					"Id": "{{ModId}}_MazeRoomPrize2",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomPrize2",
+							"ItemId": "(O)395",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+					],
+				},
+				"{{ModId}}_MazeRoomPrize3": {
+					"Id": "{{ModId}}_MazeRoomPrize3",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomPrize3",
+							"ItemId": "(O)395",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+					],
+				},
+				"{{ModId}}_MazeRoomPrize4": {
+					"Id": "{{ModId}}_MazeRoomPrize4",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomPrize4",
+							"ItemId": "(O)395",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+					],
+				},
+				"{{ModId}}_MazeRoomPrize5": {
+					"Id": "{{ModId}}_MazeRoomPrize5",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomPrize5",
+							"ItemId": "(O)395",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+					],
+				},
+				"{{ModId}}_MazeRoomPrize6": {
+					"Id": "{{ModId}}_MazeRoomPrize6",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MazeRoomPrize6",
+							"ItemId": "(O)395",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
 					],
 				},
 			}
