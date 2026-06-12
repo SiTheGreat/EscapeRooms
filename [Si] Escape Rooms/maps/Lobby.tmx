@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="19" height="28" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="18">
  <properties>
+  <property name="AmbientLight" value="95 95 95"/>
   <property name="Pathoschild.CentralStation_TicketMachine" value="5 11 Train"/>
  </properties>
  <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
