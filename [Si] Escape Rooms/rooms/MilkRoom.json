@@ -1,0 +1,351 @@
+{
+
+	// Content //////////////////////////////////////////////////////////
+
+	"Changes": [
+
+		// Items //////////////////////////////////////////////////////////
+		{
+			"Action": "Load",
+			"FromFile": "rooms/MilkRoomTicket.png",
+			"Target": "Mods/{{ModId}}/MilkRoomTicket",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_MilkRoomTicket": {
+					"Name": "{{ModId}}_MilkRoomTicket",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.ticket.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.ticket.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 150,
+					"Texture": "Mods/{{ModId}}/MilkRoomTicket",
+					"SpriteIndex": 0,
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "{{ModId}}_TicketShop", "Items" ],
+			"Entries": {
+				"{{ModId}}_MilkRoomTicket": {
+					"Id": "{{ModId}}_MilkRoomTicket",
+					"ItemId": "{{ModId}}_MilkRoomTicket",
+				},
+			},
+		},
+
+		// Poster
+		{
+			"Action": "Load",
+			"FromFile": "rooms/MilkRoomPoster.png",
+			"Target": "Mods/{{ModId}}/MilkRoomPoster",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Furniture",
+			"Entries": {
+				"{{ModId}}_MilkRoomPoster": "{{ModId}}_MilkRoomPoster/painting/1 2/1 2/1/100/-1/{{i18n:Si.ER.MilkRoom.poster.name}}/0/Mods\\{{ModId}}\\MilkRoomPoster/true",
+			},
+		},
+
+		// Map //////////////////////////////////////////////////////////
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_MilkRoom",
+			"FromFile": "maps/MilkRoom.tmx",
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"Entries": {
+				"{{ModId}}_MilkRoom": {
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.room.name}}",						
+					"CreateOnLoad": { 
+						"MapPath": "Maps/{{ModId}}_MilkRoom" 
+					},
+					"DefaultArrivalTile": {
+						"X": 12,
+						"Y": 40
+					},
+					"MusicDefault": "spring3",
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"Entries": {
+				"{{ModId}}_MilkRoomInfo": "{{i18n:Si.ER.MilkRoom.room.name}}",
+				"{{ModId}}_MilkRoomTicketMissing": "{{i18n:Si.ER.MilkRoom.ticket.denied}}",
+			},
+		},
+
+		// Actions //////////////////////////////////////////////////////////
+		{
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModId}}_MilkRoomEntry": {
+					"Id": "{{ModId}}_MilkRoomEntry",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## Spiderbuttons.BETAS_WarpFarmer {{ModId}}_MilkRoom 51 103 0 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MilkRoomTicketMissing",
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## RemoveItem (O){{ModId}}_MilkRoomTicket 1",
+					]
+				},
+			},
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Lobby",
+			"MapTiles": [
+				// Door
+				{
+					"Position": { "X": 7, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomEntry"
+					}
+				},
+				// Room Info
+				{
+					"Position": { "X": 8, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomInfo"
+					}
+				},
+			],
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_MilkRoom",
+			"MapTiles": [
+				// Exit Warp
+				{
+					"Position": { "X": 18, "Y": 12 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Warp 8 4 {{ModId}}_Lobby"
+					}
+				},
+				// Prize Tiles
+				{
+					"Position": { "X": 18, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop {{ModId}}_MilkRoomRewardShop none 600 2600 18 14 1 1"
+					}
+				},
+				// {
+				// 	"Position": { "X": 98, "Y": 101 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize1 none 600 2600 98 101 1 1"
+				// 	}
+				// },
+				// {
+				// 	"Position": { "X": 57, "Y": 76 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize2 none 600 2600 57 76 1 1"
+				// 	}
+				// },
+				// {
+				// 	"Position": { "X": 33, "Y": 76 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize3 none 600 2600 33 76 1 1"
+				// 	}
+				// },
+				// {
+				// 	"Position": { "X": 2, "Y": 28 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize4 none 600 2600 2 28 1 1"
+				// 	}
+				// },
+				// {
+				// 	"Position": { "X": 21, "Y": 5 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize5 none 600 2600 21 5 1 1"
+				// 	}
+				// },
+				// {
+				// 	"Position": { "X": 56, "Y": 5 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize6 none 600 2600 56 5 1 1"
+				// 	}
+				// },
+			],
+		},
+
+		// Reward Shops //////////////////////////////////////////////////////////
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Entries": {
+				"{{ModId}}_MilkRoomRewardShop": {
+					"Id": "{{ModId}}_MilkRoomRewardShop",
+					"Owners": [
+						{
+							"Id": "{{ModId}}_Open",
+							"Name": "AnyOrNone",
+							"Dialogues": [],
+						},
+					],
+					"Items": [
+						{
+							"Id": "{{ModId}}_MilkRoomRewardShopCake",
+							"ItemId": "(O)220",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+						{
+							"Id": "{{ModId}}_MilkRoomRewardShopMilk",
+							"ItemId": "(O)186",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+						{
+							"Id": "{{ModId}}_MilkRoomRewardShopPoster",
+							"ItemId": "(F){{ModId}}_MilkRoomPoster",
+							"AvailableStock": 1,
+							"Price": 0,
+							"AvailableStockLimit": "Player",
+						},
+					],
+				},
+				// "{{ModId}}_MilkRoomPrize1": {
+				// 	"Id": "{{ModId}}_MilkRoomPrize1",
+				// 	"Owners": [
+				// 		{
+				// 			"Id": "{{ModId}}_Open",
+				// 			"Name": "AnyOrNone",
+				// 			"Dialogues": [],
+				// 		},
+				// 	],
+				// 	"Items": [
+				// 		{
+				// 			"Id": "{{ModId}}_MilkRoomPrize1",
+				// 			"ItemId": "(O)395",
+				// 			"AvailableStock": 1,
+				// 			"Price": 0,
+				// 			"AvailableStockLimit": "Player",
+				// 		},
+				// 	],
+				// },
+				// "{{ModId}}_MilkRoomPrize2": {
+				// 	"Id": "{{ModId}}_MilkRoomPrize2",
+				// 	"Owners": [
+				// 		{
+				// 			"Id": "{{ModId}}_Open",
+				// 			"Name": "AnyOrNone",
+				// 			"Dialogues": [],
+				// 		},
+				// 	],
+				// 	"Items": [
+				// 		{
+				// 			"Id": "{{ModId}}_MilkRoomPrize2",
+				// 			"ItemId": "(O)395",
+				// 			"AvailableStock": 1,
+				// 			"Price": 0,
+				// 			"AvailableStockLimit": "Player",
+				// 		},
+				// 	],
+				// },
+				// "{{ModId}}_MilkRoomPrize3": {
+				// 	"Id": "{{ModId}}_MilkRoomPrize3",
+				// 	"Owners": [
+				// 		{
+				// 			"Id": "{{ModId}}_Open",
+				// 			"Name": "AnyOrNone",
+				// 			"Dialogues": [],
+				// 		},
+				// 	],
+				// 	"Items": [
+				// 		{
+				// 			"Id": "{{ModId}}_MilkRoomPrize3",
+				// 			"ItemId": "(O)395",
+				// 			"AvailableStock": 1,
+				// 			"Price": 0,
+				// 			"AvailableStockLimit": "Player",
+				// 		},
+				// 	],
+				// },
+				// "{{ModId}}_MilkRoomPrize4": {
+				// 	"Id": "{{ModId}}_MilkRoomPrize4",
+				// 	"Owners": [
+				// 		{
+				// 			"Id": "{{ModId}}_Open",
+				// 			"Name": "AnyOrNone",
+				// 			"Dialogues": [],
+				// 		},
+				// 	],
+				// 	"Items": [
+				// 		{
+				// 			"Id": "{{ModId}}_MilkRoomPrize4",
+				// 			"ItemId": "(O)395",
+				// 			"AvailableStock": 1,
+				// 			"Price": 0,
+				// 			"AvailableStockLimit": "Player",
+				// 		},
+				// 	],
+				// },
+				// "{{ModId}}_MilkRoomPrize5": {
+				// 	"Id": "{{ModId}}_MilkRoomPrize5",
+				// 	"Owners": [
+				// 		{
+				// 			"Id": "{{ModId}}_Open",
+				// 			"Name": "AnyOrNone",
+				// 			"Dialogues": [],
+				// 		},
+				// 	],
+				// 	"Items": [
+				// 		{
+				// 			"Id": "{{ModId}}_MilkRoomPrize5",
+				// 			"ItemId": "(O)395",
+				// 			"AvailableStock": 1,
+				// 			"Price": 0,
+				// 			"AvailableStockLimit": "Player",
+				// 		},
+				// 	],
+				// },
+				// "{{ModId}}_MilkRoomPrize6": {
+				// 	"Id": "{{ModId}}_MilkRoomPrize6",
+				// 	"Owners": [
+				// 		{
+				// 			"Id": "{{ModId}}_Open",
+				// 			"Name": "AnyOrNone",
+				// 			"Dialogues": [],
+				// 		},
+				// 	],
+				// 	"Items": [
+				// 		{
+				// 			"Id": "{{ModId}}_MilkRoomPrize6",
+				// 			"ItemId": "(O)395",
+				// 			"AvailableStock": 1,
+				// 			"Price": 0,
+				// 			"AvailableStockLimit": "Player",
+				// 		},
+				// 	],
+				// },
+			}
+		},
+
+		// Puzzles //////////////////////////////////////////////////////////
+
+	// End //////////////////////////////////////////////////////////
+
+	]
+
+}

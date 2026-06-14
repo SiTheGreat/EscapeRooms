@@ -8,4 +8,10 @@
 	"Si.ER.MazeRoom.ticket.desc": "A ticket to the Library Labyrinth escape room.",
 	"Si.ER.MazeRoom.ticket.denied": "You don't have the right ticket for the Library Labyrinth!",
 	"Si.ER.MazeRoom.poster.name": "Reading is A-MAZE-ing!",
+	// Milk Room
+	"Si.ER.MilkRoom.room.name": "The ROOM",
+	"Si.ER.MilkRoom.ticket.name": "ROOM Ticket",
+	"Si.ER.MilkRoom.ticket.desc": "A ticket to the ROOM escape room.",
+	"Si.ER.MilkRoom.ticket.denied": "You don't have the right ticket for the ROOM!",
+	"Si.ER.MilkRoom.poster.name": "Got Milk?",
 }
