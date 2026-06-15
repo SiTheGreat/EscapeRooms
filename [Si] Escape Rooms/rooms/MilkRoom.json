@@ -142,6 +142,28 @@
 						"Action": "OpenShop {{ModId}}_MilkRoomRewardShop none 600 2600 18 14 1 1"
 					}
 				},
+				// Interior Doors
+				{
+					"Position": { "X": 5, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
+					}
+				},
+				{
+					"Position": { "X": 18, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
+					}
+				},
+				{
+					"Position": { "X": 25, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
+					}
+				},
 				// {
 				// 	"Position": { "X": 98, "Y": 101 },
 				// 	"Layer": "Buildings",
