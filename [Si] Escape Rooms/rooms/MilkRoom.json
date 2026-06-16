@@ -134,6 +134,7 @@
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
 			"Entries": {
+				// Enter room and remove ticket
 				"{{ModId}}_MilkRoomEntry": {
 					"Id": "{{ModId}}_MilkRoomEntry",
 					"MarkActionApplied": false,
@@ -141,6 +142,42 @@
 					"Actions": [
 						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## Spiderbuttons.BETAS_WarpFarmer {{ModId}}_MilkRoom 12 40 0 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MilkRoomTicketMissing",
 						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## RemoveItem (O){{ModId}}_MilkRoomTicket 1",
+					]
+				},
+				// Leave room and remove keys
+				"{{ModId}}_MilkRoomExit": {
+					"Id": "{{ModId}}_MilkRoomExit",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"Spiderbuttons.BETAS_WarpFarmer {{ModId}}_Lobby 8 4 2",
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenkey ## RemoveItem (O){{ModId}}_MilkRoomKitchenkey",
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomkey ## RemoveItem (O){{ModId}}_MilkRoomBedroomkey",
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizekey ## RemoveItem (O){{ModId}}_MilkRoomPrizekey",
+					]
+				},
+				"{{ModId}}_MilkRoomGetKitchenKey": {
+					"Id": "{{ModId}}_MilkRoomGetKitchenKey",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"AddItem (O){{ModId}}_MilkRoomKitchenkey 1",
+					]
+				},
+				"{{ModId}}_MilkRoomGetBedroomKey": {
+					"Id": "{{ModId}}_MilkRoomGetBedroomKey",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"AddItem (O){{ModId}}_MilkRoomBedroomkey 1",
+					]
+				},
+				"{{ModId}}_MilkRoomGetPrizeKey": {
+					"Id": "{{ModId}}_MilkRoomGetPrizeKey",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"AddItem (O){{ModId}}_MilkRoomPrizekey 1",
 					]
 				},
 			},
@@ -179,7 +216,7 @@
 					"Position": { "X": 18, "Y": 12 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "Warp 8 4 {{ModId}}_Lobby"
+						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomExit"
 					}
 				},
 				// Prize Tiles
@@ -188,6 +225,28 @@
 					"Layer": "Buildings",
 					"SetProperties": {
 						"Action": "OpenShop {{ModId}}_MilkRoomRewardShop none 600 2600 18 14 1 1"
+					}
+				},
+				// Key Locations // CHANGE TO SHOPS OR FIND WAY TO LIMIT TO ONE PER DAY
+				{
+					"Position": { "X": 11, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomGetKitchenKey"
+					}
+				},
+				{
+					"Position": { "X": 4, "Y": 13 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomGetBedroomKey" // will change to cooked item
+					}
+				},
+				{
+					"Position": { "X": 19, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomGetPrizeKey"
 					}
 				},
 				// Interior Doors
