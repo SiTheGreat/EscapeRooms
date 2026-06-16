@@ -64,7 +64,7 @@
 			"Entries": {
 				"{{ModId}}_MilkRoom": {
 					"DisplayName": "{{i18n:Si.ER.MilkRoom.room.name}}",						
-					"CreateOnLoad": { 
+					"CreateOnLoad": {
 						"MapPath": "Maps/{{ModId}}_MilkRoom" 
 					},
 					"DefaultArrivalTile": {
@@ -94,7 +94,7 @@
 					"MarkActionApplied": false,
 					"Trigger": "Manual",
 					"Actions": [
-						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## Spiderbuttons.BETAS_WarpFarmer {{ModId}}_MilkRoom 51 103 0 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MilkRoomTicketMissing",
+						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## Spiderbuttons.BETAS_WarpFarmer {{ModId}}_MilkRoom 12 40 0 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MilkRoomTicketMissing",
 						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomTicket ## RemoveItem (O){{ModId}}_MilkRoomTicket 1",
 					]
 				},
@@ -125,6 +125,9 @@
 		{
 			"Action": "EditMap",
 			"Target": "Maps/{{ModId}}_MilkRoom",
+			"MapProperties": {
+                "Doors": "5 29 1 120 18 29 1 120 25 29 1 120"
+            },
 			"MapTiles": [
 				// Exit Warp
 				{

@@ -120,6 +120,12 @@
 			"FromFile": "rooms/MazeRoom.json",
 		},
 
+		// Milk Room
+		{
+			"Action": "Include",
+			"FromFile": "rooms/MilkRoom.json",
+		},
+
 	// End //////////////////////////////////////////////////////////
 
 	]
