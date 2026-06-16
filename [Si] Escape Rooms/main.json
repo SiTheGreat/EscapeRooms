@@ -111,6 +111,15 @@
 				},
 			}
 		},
+		
+		// General
+
+		// Generic Key
+		{
+			"Action": "Load",
+			"FromFile": "rooms/Key.png",
+			"Target": "Mods/{{ModId}}/GenKey",
+		},
 
 		// Rooms //////////////////////////////////////////////////////////
 

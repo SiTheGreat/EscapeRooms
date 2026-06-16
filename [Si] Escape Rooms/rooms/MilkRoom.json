@@ -23,6 +23,45 @@
 					"Price": 150,
 					"Texture": "Mods/{{ModId}}/MilkRoomTicket",
 					"SpriteIndex": 0,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomKitchenKey": {
+					"Name": "{{ModId}}_MilkRoomKitchenKey",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.kitchenkey.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.kitchenkey.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/GenKey",
+					"SpriteIndex": 0,
+				},
+				"{{ModId}}_MilkRoomBedroomKey": {
+					"Name": "{{ModId}}_MilkRoomBedroomKey",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.bedroomkey.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.bedroomkey.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/GenKey",
+					"SpriteIndex": 0,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomPrizeKey": {
+					"Name": "{{ModId}}_MilkRoomPrizeKey",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.prizekey.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.prizekey.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/GenKey",
+					"SpriteIndex": 0,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
 				},
 			},
 		},
@@ -156,21 +195,21 @@
 					"Position": { "X": 5, "Y": 29 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
+						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenKey"
 					}
 				},
 				{
 					"Position": { "X": 18, "Y": 29 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
+						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomKey"
 					}
 				},
 				{
 					"Position": { "X": 25, "Y": 29 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
+						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizeKey"
 					}
 				},
 				// Book Titles
