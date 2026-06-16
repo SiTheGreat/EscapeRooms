@@ -14,4 +14,9 @@
 	"Si.ER.MilkRoom.ticket.desc": "A ticket to the ROOM escape room.",
 	"Si.ER.MilkRoom.ticket.denied": "You don't have the right ticket for the ROOM!",
 	"Si.ER.MilkRoom.poster.name": "Got Milk?",
+	"Si.ER.MilkRoom.book.D": "D book",
+	"Si.ER.MilkRoom.book.B": "D book",
+	"Si.ER.MilkRoom.book.A": "D book",
+	"Si.ER.MilkRoom.book.F": "D book",
+	"Si.ER.MilkRoom.book.G": "D book",
 }

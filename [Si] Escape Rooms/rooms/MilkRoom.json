@@ -81,6 +81,12 @@
 			"Entries": {
 				"{{ModId}}_MilkRoomInfo": "{{i18n:Si.ER.MilkRoom.room.name}}",
 				"{{ModId}}_MilkRoomTicketMissing": "{{i18n:Si.ER.MilkRoom.ticket.denied}}",
+				// Book Titles
+				"{{ModId}}_MilkRoomBookD": "{{i18n:Si.ER.MilkRoom.book.D}}",
+				"{{ModId}}_MilkRoomBookB": "{{i18n:Si.ER.MilkRoom.book.B}}",
+				"{{ModId}}_MilkRoomBookA": "{{i18n:Si.ER.MilkRoom.book.A}}",
+				"{{ModId}}_MilkRoomBookF": "{{i18n:Si.ER.MilkRoom.book.F}}",
+				"{{ModId}}_MilkRoomBookG": "{{i18n:Si.ER.MilkRoom.book.G}}",
 			},
 		},
 
@@ -167,48 +173,63 @@
 						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O)223" // change
 					}
 				},
-				// {
-				// 	"Position": { "X": 98, "Y": 101 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize1 none 600 2600 98 101 1 1"
-				// 	}
-				// },
-				// {
-				// 	"Position": { "X": 57, "Y": 76 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize2 none 600 2600 57 76 1 1"
-				// 	}
-				// },
-				// {
-				// 	"Position": { "X": 33, "Y": 76 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize3 none 600 2600 33 76 1 1"
-				// 	}
-				// },
-				// {
-				// 	"Position": { "X": 2, "Y": 28 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize4 none 600 2600 2 28 1 1"
-				// 	}
-				// },
-				// {
-				// 	"Position": { "X": 21, "Y": 5 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize5 none 600 2600 21 5 1 1"
-				// 	}
-				// },
-				// {
-				// 	"Position": { "X": 56, "Y": 5 },
-				// 	"Layer": "Buildings",
-				// 	"SetProperties": {
-				// 		"Action": "OpenShop {{ModId}}_MilkRoomPrize6 none 600 2600 56 5 1 1"
-				// 	}
-				// },
+				// Book Titles
+				{
+					"Position": { "X": 3, "Y": 35 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookD"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 36 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookD"
+					}
+				},
+				{
+					"Position": { "X": 7, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookB"
+					}
+				},
+				{
+					"Position": { "X": 8, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookB"
+					}
+				},
+				{
+					"Position": { "X": 16, "Y": 36 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookA"
+					}
+				},
+				{
+					"Position": { "X": 21, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookF"
+					}
+				},
+				{
+					"Position": { "X": 22, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookF"
+					}
+				},
+				{
+					"Position": { "X": 23, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message {{ModId}}_MilkRoomBookG"
+					}
+				},
 			],
 		},
 
