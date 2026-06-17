@@ -20,8 +20,8 @@
 	"Si.ER.MilkRoom.bedroomkey.desc": "A simple key.",
 	"Si.ER.MilkRoom.prizekey.name": "Key.",
 	"Si.ER.MilkRoom.prizekey.desc": "A simple key.",
-	"Si.ER.MilkRoom.book.D": "D book",
-	"Si.ER.MilkRoom.book.B": "B book",
+	"Si.ER.MilkRoom.book.D": "D book", // Translators: this is a book title that has to start with the letter D/correspond to KEY
+ 	"Si.ER.MilkRoom.book.B": "B book",
 	"Si.ER.MilkRoom.book.A": "A book",
 	"Si.ER.MilkRoom.book.F": "F book",
 	"Si.ER.MilkRoom.book.G": "G book",

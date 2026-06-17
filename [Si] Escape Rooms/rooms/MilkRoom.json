@@ -160,6 +160,7 @@
 					"Id": "{{ModId}}_MilkRoomGetKitchenKey",
 					"MarkActionApplied": false,
 					"Trigger": "Manual",
+					"Condition": "!PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenkey",
 					"Actions": [
 						"AddItem (O){{ModId}}_MilkRoomKitchenkey 1",
 					]
@@ -168,6 +169,7 @@
 					"Id": "{{ModId}}_MilkRoomGetBedroomKey",
 					"MarkActionApplied": false,
 					"Trigger": "Manual",
+					"Condition": "PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenkey, !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomkey",
 					"Actions": [
 						"AddItem (O){{ModId}}_MilkRoomBedroomkey 1",
 					]
@@ -176,6 +178,7 @@
 					"Id": "{{ModId}}_MilkRoomGetPrizeKey",
 					"MarkActionApplied": false,
 					"Trigger": "Manual",
+					"Condition": "PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomkey, !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizekey",
 					"Actions": [
 						"AddItem (O){{ModId}}_MilkRoomPrizekey 1",
 					]
@@ -227,7 +230,7 @@
 						"Action": "OpenShop {{ModId}}_MilkRoomRewardShop none 600 2600 18 14 1 1"
 					}
 				},
-				// Key Locations // CHANGE TO SHOPS OR FIND WAY TO LIMIT TO ONE PER DAY
+				// Key Locations
 				{
 					"Position": { "X": 11, "Y": 31 },
 					"Layer": "Buildings",
