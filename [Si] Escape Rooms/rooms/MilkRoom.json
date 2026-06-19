@@ -4,7 +4,7 @@
 
 	"Changes": [
 
-		// Items //////////////////////////////////////////////////////////
+		// Ticket //////////////////////////////////////////////////////////
 		{
 			"Action": "Load",
 			"FromFile": "rooms/MilkRoomTicket.png",
@@ -12,8 +12,27 @@
 		},
 		{
 			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "{{ModId}}_TicketShop", "Items" ],
+			"Entries": {
+				"{{ModId}}_MilkRoomTicket": {
+					"Id": "{{ModId}}_MilkRoomTicket",
+					"ItemId": "{{ModId}}_MilkRoomTicket",
+				},
+			},
+		},
+
+		// Items //////////////////////////////////////////////////////////
+		{
+			"Action": "Load",
+			"FromFile": "rooms/MilkRoomMats.png",
+			"Target": "Mods/{{ModId}}/MilkRoomMats",
+		},
+		{
+			"Action": "EditData",
 			"Target": "Data/Objects",
 			"Entries": {
+				// Ticket
 				"{{ModId}}_MilkRoomTicket": {
 					"Name": "{{ModId}}_MilkRoomTicket",
 					"DisplayName": "{{i18n:Si.ER.MilkRoom.ticket.name}}",
@@ -27,6 +46,7 @@
 					"ExcludeFromRandomSale": true,
 					"ExcludeFromShippingCollection": true,
 				},
+				// Keys
 				"{{ModId}}_MilkRoomKitchenKey": {
 					"Name": "{{ModId}}_MilkRoomKitchenKey",
 					"DisplayName": "{{i18n:Si.ER.MilkRoom.kitchenkey.name}}",
@@ -63,16 +83,84 @@
 					"ExcludeFromRandomSale": true,
 					"ExcludeFromShippingCollection": true,
 				},
-			},
-		},
-		{
-			"Action": "EditData",
-			"Target": "Data/Shops",
-			"TargetField": [ "{{ModId}}_TicketShop", "Items" ],
-			"Entries": {
-				"{{ModId}}_MilkRoomTicket": {
-					"Id": "{{ModId}}_MilkRoomTicket",
-					"ItemId": "{{ModId}}_MilkRoomTicket",
+				// Objects
+				"{{ModId}}_MilkRoomToDoList": {
+					"Name": "{{ModId}}_MilkRoomToDoList",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.todolist.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.todolist.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/MilkRoomMats",
+					"SpriteIndex": 4,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomMug": {
+					"Name": "{{ModId}}_MilkRoomMug",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.mug.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.mug.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/MilkRoomMats",
+					"SpriteIndex": 5,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomPlacemat1": {
+					"Name": "{{ModId}}_MilkRoomPlacemat1",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.placemat1.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.placemat1.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/MilkRoomMats",
+					"SpriteIndex": 0,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomPlacemat2": {
+					"Name": "{{ModId}}_MilkRoomPlacemat2",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.placemat2.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.placemat2.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/MilkRoomMats",
+					"SpriteIndex": 1,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomPlacemat3": {
+					"Name": "{{ModId}}_MilkRoomPlacemat3",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.placemat3.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.placemat3.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/MilkRoomMats",
+					"SpriteIndex": 2,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
+				},
+				"{{ModId}}_MilkRoomPlacemat4": {
+					"Name": "{{ModId}}_MilkRoomPlacemat4",
+					"DisplayName": "{{i18n:Si.ER.MilkRoom.placemat4.name}}",
+					"Description": "{{i18n:Si.ER.MilkRoom.placemat4.desc}}",
+					"Type": "asdf",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/MilkRoomMats",
+					"SpriteIndex": 3,
+					"CanBeTrashed": false,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromShippingCollection": true,
 				},
 			},
 		},
@@ -118,8 +206,11 @@
 			"Action": "EditData",
 			"Target": "Strings/StringsFromMaps",
 			"Entries": {
+				// Entryway
 				"{{ModId}}_MilkRoomInfo": "{{i18n:Si.ER.MilkRoom.room.name}}",
 				"{{ModId}}_MilkRoomTicketMissing": "{{i18n:Si.ER.MilkRoom.ticket.denied}}",
+				// Missing printer ink
+				"{{ModId}}__MilkRoomInkMissing": "{{i18n:Si.ER.MilkRoom.missing.printerink}}",
 				// Book Titles
 				"{{ModId}}_MilkRoomBookD": "{{i18n:Si.ER.MilkRoom.book.D}}",
 				"{{ModId}}_MilkRoomBookB": "{{i18n:Si.ER.MilkRoom.book.B}}",
@@ -156,6 +247,7 @@
 						"If PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizekey ## RemoveItem (O){{ModId}}_MilkRoomPrizekey",
 					]
 				},
+				// Get keys
 				"{{ModId}}_MilkRoomGetKitchenKey": {
 					"Id": "{{ModId}}_MilkRoomGetKitchenKey",
 					"MarkActionApplied": false,
@@ -181,6 +273,37 @@
 					"Condition": "PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomkey, !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizekey",
 					"Actions": [
 						"AddItem (O){{ModId}}_MilkRoomPrizekey 1",
+					]
+				},
+				// Blue couch
+				"{{ModId}}_MilkRoomBlueCouch": {
+					"Id": "{{ModId}}_MilkRoomBlueCouch",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Condition": "!PLAYER_HAS_ITEM Current (O)168",
+					"Actions": [
+						"AddItem (O)168",
+					]
+				},
+				// Trash can
+				"{{ModId}}_MilkRoomTrashCan": {
+					"Id": "{{ModId}}_MilkRoomTrashCan",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Condition": "PLAYER_HAS_ITEM Current (O)168",
+					"Actions": [
+						"RemoveItem (O)168",
+					]
+				},
+				// Printer
+				"{{ModId}}_MilkRoomPrinter": {
+					"Id": "{{ModId}}_MilkRoomPrinter",
+					"MarkActionApplied": false,
+					"Trigger": "Manual",
+					"Actions": [
+						"If !PLAYER_HAS_ITEM Current (O)814 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MilkRoomInkMissing",
+						"If PLAYER_HAS_ITEM Current (O)814 ## AddItem (O){{ModId}}_MilkRoomToDoList",
+						"If PLAYER_HAS_ITEM Current (O)814 ## RemoveItem (O)814",
 					]
 				},
 			},
@@ -272,6 +395,30 @@
 					"Layer": "Buildings",
 					"SetProperties": {
 						"Action": "ConditionalDoor PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizeKey"
+					}
+				},
+				// Couches
+				{
+					"Position": { "X": 13, "Y": 35 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomBlueCouch"
+					}
+				},
+				// Bed
+				{
+					"Position": { "X": 29, "Y": 14 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomSleep"
+					}
+				},
+				// Printer
+				{
+					"Position": { "X": 5, "Y": 13 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"TouchAction": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomPrinter"
 					}
 				},
 				// Book Titles
@@ -372,124 +519,49 @@
 						},
 					],
 				},
-				// "{{ModId}}_MilkRoomPrize1": {
-				// 	"Id": "{{ModId}}_MilkRoomPrize1",
-				// 	"Owners": [
-				// 		{
-				// 			"Id": "{{ModId}}_Open",
-				// 			"Name": "AnyOrNone",
-				// 			"Dialogues": [],
-				// 		},
-				// 	],
-				// 	"Items": [
-				// 		{
-				// 			"Id": "{{ModId}}_MilkRoomPrize1",
-				// 			"ItemId": "(O)395",
-				// 			"AvailableStock": 1,
-				// 			"Price": 0,
-				// 			"AvailableStockLimit": "Player",
-				// 		},
-				// 	],
-				// },
-				// "{{ModId}}_MilkRoomPrize2": {
-				// 	"Id": "{{ModId}}_MilkRoomPrize2",
-				// 	"Owners": [
-				// 		{
-				// 			"Id": "{{ModId}}_Open",
-				// 			"Name": "AnyOrNone",
-				// 			"Dialogues": [],
-				// 		},
-				// 	],
-				// 	"Items": [
-				// 		{
-				// 			"Id": "{{ModId}}_MilkRoomPrize2",
-				// 			"ItemId": "(O)395",
-				// 			"AvailableStock": 1,
-				// 			"Price": 0,
-				// 			"AvailableStockLimit": "Player",
-				// 		},
-				// 	],
-				// },
-				// "{{ModId}}_MilkRoomPrize3": {
-				// 	"Id": "{{ModId}}_MilkRoomPrize3",
-				// 	"Owners": [
-				// 		{
-				// 			"Id": "{{ModId}}_Open",
-				// 			"Name": "AnyOrNone",
-				// 			"Dialogues": [],
-				// 		},
-				// 	],
-				// 	"Items": [
-				// 		{
-				// 			"Id": "{{ModId}}_MilkRoomPrize3",
-				// 			"ItemId": "(O)395",
-				// 			"AvailableStock": 1,
-				// 			"Price": 0,
-				// 			"AvailableStockLimit": "Player",
-				// 		},
-				// 	],
-				// },
-				// "{{ModId}}_MilkRoomPrize4": {
-				// 	"Id": "{{ModId}}_MilkRoomPrize4",
-				// 	"Owners": [
-				// 		{
-				// 			"Id": "{{ModId}}_Open",
-				// 			"Name": "AnyOrNone",
-				// 			"Dialogues": [],
-				// 		},
-				// 	],
-				// 	"Items": [
-				// 		{
-				// 			"Id": "{{ModId}}_MilkRoomPrize4",
-				// 			"ItemId": "(O)395",
-				// 			"AvailableStock": 1,
-				// 			"Price": 0,
-				// 			"AvailableStockLimit": "Player",
-				// 		},
-				// 	],
-				// },
-				// "{{ModId}}_MilkRoomPrize5": {
-				// 	"Id": "{{ModId}}_MilkRoomPrize5",
-				// 	"Owners": [
-				// 		{
-				// 			"Id": "{{ModId}}_Open",
-				// 			"Name": "AnyOrNone",
-				// 			"Dialogues": [],
-				// 		},
-				// 	],
-				// 	"Items": [
-				// 		{
-				// 			"Id": "{{ModId}}_MilkRoomPrize5",
-				// 			"ItemId": "(O)395",
-				// 			"AvailableStock": 1,
-				// 			"Price": 0,
-				// 			"AvailableStockLimit": "Player",
-				// 		},
-				// 	],
-				// },
-				// "{{ModId}}_MilkRoomPrize6": {
-				// 	"Id": "{{ModId}}_MilkRoomPrize6",
-				// 	"Owners": [
-				// 		{
-				// 			"Id": "{{ModId}}_Open",
-				// 			"Name": "AnyOrNone",
-				// 			"Dialogues": [],
-				// 		},
-				// 	],
-				// 	"Items": [
-				// 		{
-				// 			"Id": "{{ModId}}_MilkRoomPrize6",
-				// 			"ItemId": "(O)395",
-				// 			"AvailableStock": 1,
-				// 			"Price": 0,
-				// 			"AvailableStockLimit": "Player",
-				// 		},
-				// 	],
-				// },
 			}
 		},
 
 		// Puzzles //////////////////////////////////////////////////////////
+
+		// Piano
+
+		// Bed
+		{
+			"Action": "EditData",
+			"Target": "mushymato.MMAP/QuestionDialogue",
+			"Entries": {
+				// Bed
+				"{{ModId}}_MilkRoomSleep": {
+					"Question": "[LocalizedText Strings/Locations:FarmHouse_Bed_GoToSleep]",
+					// "Speaker": "Krobus",
+					"ResponseEntries": {
+						// "Cancel": {},
+						"{{ModId}}_MilkRoomSleep_Yes": {
+							"Label": "[LocalizedText Strings/UI:Emote_Yes]",
+              				// "Condition": "!PLAYER_HAS_ITEM Current (O)1669", // UPDATE
+							"Actions": [
+								"AddItem (O)16",
+							],
+						},
+						"{{ModId}}_MilkRoomSleep_No": {
+							"Label": "[LocalizedText Strings/UI:Emote_No]",
+              				// "Condition": "!PLAYER_HAS_ITEM Current (O)1669", // UPDATE
+							"TileActions": [
+								"AddItem (O)223",
+							],
+						},
+					},
+				},
+				// Piano
+				// Looping version of the above w cancel
+				// Each option takes you back to q1 unless it's the correct option, then it goes onwards
+			},
+		},
+
+		// Radio
+
+		// Table
 
 	// End //////////////////////////////////////////////////////////
 

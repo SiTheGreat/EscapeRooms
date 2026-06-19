@@ -1,25 +1,45 @@
 {
+	// General //////////////////////////////////////////////////////////
 	"Si.ER.name": "Escape Rooms",
 	"Si.ER.door.exit": "This door is the exit from the escape rooms.",
 	"Si.ER.door.upcoming": "Coming soon!",
-	// Maze Room
+	// Maze Room //////////////////////////////////////////////////////////
 	"Si.ER.MazeRoom.room.name": "The Library Labyrinth",
 	"Si.ER.MazeRoom.ticket.name": "Library Labyrinth Ticket",
 	"Si.ER.MazeRoom.ticket.desc": "A ticket to the Library Labyrinth escape room.",
 	"Si.ER.MazeRoom.ticket.denied": "You don't have the right ticket for the Library Labyrinth!",
 	"Si.ER.MazeRoom.poster.name": "Reading is A-MAZE-ing!",
-	// Milk Room
+	// Milk Room //////////////////////////////////////////////////////////
 	"Si.ER.MilkRoom.room.name": "The ROOM",
 	"Si.ER.MilkRoom.ticket.name": "ROOM Ticket",
 	"Si.ER.MilkRoom.ticket.desc": "A ticket to the ROOM escape room.",
 	"Si.ER.MilkRoom.ticket.denied": "You don't have the right ticket for the ROOM!",
 	"Si.ER.MilkRoom.poster.name": "Got Milk?",
+	// Items
 	"Si.ER.MilkRoom.kitchenkey.name": "Key.",
 	"Si.ER.MilkRoom.kitchenkey.desc": "A simple key.",
 	"Si.ER.MilkRoom.bedroomkey.name": "Key.",
 	"Si.ER.MilkRoom.bedroomkey.desc": "A simple key.",
 	"Si.ER.MilkRoom.prizekey.name": "Key.",
 	"Si.ER.MilkRoom.prizekey.desc": "A simple key.",
+	"Si.ER.MilkRoom.todolist.name": "To Do List",
+	"Si.ER.MilkRoom.todolist.desc": "Cook RECIPE.",
+	"Si.ER.MilkRoom.mug.name": "Dirty Mug",
+	"Si.ER.MilkRoom.mug.desc": "This mug is rather dirty.",
+	"Si.ER.MilkRoom.placemat1.name": "Placemat",
+	"Si.ER.MilkRoom.placemat1.desc": "A placemat for eating.",
+	"Si.ER.MilkRoom.placemat2.name": "Placemat",
+	"Si.ER.MilkRoom.placemat2.desc": "A placemat for eating.",
+	"Si.ER.MilkRoom.placemat3.name": "Placemat",
+	"Si.ER.MilkRoom.placemat3.desc": "A placemat for eating.",
+	"Si.ER.MilkRoom.placemat4.name": "Placemat",
+	"Si.ER.MilkRoom.placemat4.desc": "A placemat for eating.",
+	// Hints
+	// Printer
+	"Si.ER.MilkRoom.missing.printerink": "This printer is out of ink.",
+	// Bed
+	// "Si.ER.MilkRoom.bed.sleep": "This printer is out of ink.",
+	// Books
 	"Si.ER.MilkRoom.book.D": "D book", // Translators: this is a book title that has to start with the letter D/correspond to KEY
  	"Si.ER.MilkRoom.book.B": "B book",
 	"Si.ER.MilkRoom.book.A": "A book",
