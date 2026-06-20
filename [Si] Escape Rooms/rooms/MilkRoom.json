@@ -354,13 +354,13 @@
 					}
 				},
 				// Key Locations
-				{
-					"Position": { "X": 11, "Y": 31 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomGetKitchenKey"
-					}
-				},
+				// {
+				// 	"Position": { "X": 11, "Y": 31 },
+				// 	"Layer": "Buildings",
+				// 	"SetProperties": {
+				// 		"Action": "spacechase0.SpaceCore_TriggerAction {{ModId}}_MilkRoomGetKitchenKey"
+				// 	}
+				// },
 				{
 					"Position": { "X": 4, "Y": 13 },
 					"Layer": "Buildings",
@@ -411,6 +411,14 @@
 					"Layer": "Back",
 					"SetProperties": {
 						"TouchAction": "mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomSleep"
+					}
+				},
+				// Piano
+				{
+					"Position": { "X": 11, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote"
 					}
 				},
 				// Printer
@@ -524,8 +532,6 @@
 
 		// Puzzles //////////////////////////////////////////////////////////
 
-		// Piano
-
 		// Bed
 		{
 			"Action": "EditData",
@@ -534,7 +540,6 @@
 				// Bed
 				"{{ModId}}_MilkRoomSleep": {
 					"Question": "[LocalizedText Strings/Locations:FarmHouse_Bed_GoToSleep]",
-					// "Speaker": "Krobus",
 					"ResponseEntries": {
 						// "Cancel": {},
 						"{{ModId}}_MilkRoomSleep_Yes": {
@@ -547,21 +552,120 @@
 						"{{ModId}}_MilkRoomSleep_No": {
 							"Label": "[LocalizedText Strings/UI:Emote_No]",
               				// "Condition": "!PLAYER_HAS_ITEM Current (O)1669", // UPDATE
-							"TileActions": [
-								"AddItem (O)223",
-							],
+							// "TileActions": [
+							// 	"AddItem (O)223",
+							// ],
 						},
 					},
 				},
 				// Piano
-				// Looping version of the above w cancel
-				// Each option takes you back to q1 unless it's the correct option, then it goes onwards
+				// Have a secret tune?
+				// D note
+				"{{ModId}}_MilkRoomPiano_Dnote": {
+					"Question": "What note would you like to play?",
+					"ResponseEntries": {
+						"{{ModId}}_MilkRoomPiano_A": {
+							"Label": "A",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote {{ModId}}_MilkRoomPiano_A {{ModId}}_MilkRoomPiano_B", // useful?
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_B": {
+							"Label": "B",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_C": {
+							"Label": "C",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_D": {
+							"Label": "D",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Bnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_E": {
+							"Label": "E",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_F": {
+							"Label": "F",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_G": {
+							"Label": "G",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"Cancel": {},
+					},
+				},
+				// B note
+				"{{ModId}}_MilkRoomPiano_Bnote": {
+					"Question": "What note would you like to play?",
+					"ResponseEntries": {
+						"{{ModId}}_MilkRoomPiano_A": {
+							"Label": "A",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_B": {
+							"Label": "B",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_C": {
+							"Label": "C",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_D": {
+							"Label": "D",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_E": {
+							"Label": "E",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_F": {
+							"Label": "F",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_G": {
+							"Label": "G",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"Cancel": {},
+					},
+				},
 			},
 		},
 
 		// Radio
 
 		// Table
+		// betas itemequipped + mmap mapoverride?
+		// or just UB it lol
 
 	// End //////////////////////////////////////////////////////////
 

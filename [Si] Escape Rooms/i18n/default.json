@@ -40,9 +40,14 @@
 	// Bed
 	// "Si.ER.MilkRoom.bed.sleep": "This printer is out of ink.",
 	// Books
-	"Si.ER.MilkRoom.book.D": "D book", // Translators: this is a book title that has to start with the letter D/correspond to KEY
- 	"Si.ER.MilkRoom.book.B": "B book",
-	"Si.ER.MilkRoom.book.A": "A book",
-	"Si.ER.MilkRoom.book.F": "F book",
-	"Si.ER.MilkRoom.book.G": "G book",
+	"Si.ER.MilkRoom.book.D": "D book", // Translators: this is a book title that has to start with the letter that corresponds to Si.ER.MilkRoom.letter.D
+ 	"Si.ER.MilkRoom.book.B": "B book", // Translators: this is a book title that has to start with the letter that corresponds to Si.ER.MilkRoom.letter.B
+	"Si.ER.MilkRoom.book.A": "A book", // Translators: this is a book title that has to start with the letter that corresponds to Si.ER.MilkRoom.letter.A
+	"Si.ER.MilkRoom.book.F": "F book", // Translators: this is a book title that has to start with the letter that corresponds to Si.ER.MilkRoom.letter.F
+	"Si.ER.MilkRoom.book.G": "G book", // Translators: this is a book title that has to start with the letter that corresponds to Si.ER.MilkRoom.letter.G
+	"Si.ER.MilkRoom.letter.D": "D book", // Translators: this is a letter that is a response option on the piano corresponding to the first letter of a book title
+ 	"Si.ER.MilkRoom.letter.B": "B book", // Translators: this is a letter that is a response option on the piano corresponding to the first letter of a book title
+	"Si.ER.MilkRoom.letter.A": "A book", // Translators: this is a letter that is a response option on the piano corresponding to the first letter of a book title
+	"Si.ER.MilkRoom.letter.F": "F book", // Translators: this is a letter that is a response option on the piano corresponding to the first letter of a book title
+	"Si.ER.MilkRoom.letter.G": "G book", // Translators: this is a letter that is a response option on the piano corresponding to the first letter of a book title
 }
