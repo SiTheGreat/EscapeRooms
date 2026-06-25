@@ -248,15 +248,15 @@
 					]
 				},
 				// Get keys
-				"{{ModId}}_MilkRoomGetKitchenKey": {
-					"Id": "{{ModId}}_MilkRoomGetKitchenKey",
-					"MarkActionApplied": false,
-					"Trigger": "Manual",
-					"Condition": "!PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenkey",
-					"Actions": [
-						"AddItem (O){{ModId}}_MilkRoomKitchenkey 1",
-					]
-				},
+				// "{{ModId}}_MilkRoomGetKitchenKey": {
+				// 	"Id": "{{ModId}}_MilkRoomGetKitchenKey",
+				// 	"MarkActionApplied": false,
+				// 	"Trigger": "Manual",
+				// 	"Condition": "!PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenkey",
+				// 	"Actions": [
+				// 		"AddItem (O){{ModId}}_MilkRoomKitchenkey 1",
+				// 	]
+				// },
 				"{{ModId}}_MilkRoomGetBedroomKey": {
 					"Id": "{{ModId}}_MilkRoomGetBedroomKey",
 					"MarkActionApplied": false,
@@ -559,6 +559,7 @@
 					},
 				},
 				// Piano
+				// DBAFG
 				// Have a secret tune?
 				// D note
 				"{{ModId}}_MilkRoomPiano_Dnote": {
@@ -567,7 +568,8 @@
 						"{{ModId}}_MilkRoomPiano_A": {
 							"Label": "A",
 							"Actions": [
-								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote {{ModId}}_MilkRoomPiano_A {{ModId}}_MilkRoomPiano_B", // useful?
+								// "mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote {{ModId}}_MilkRoomPiano_A {{ModId}}_MilkRoomPiano_B", // useful?
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
 							],
 						},
 						"{{ModId}}_MilkRoomPiano_B": {
@@ -622,6 +624,55 @@
 						"{{ModId}}_MilkRoomPiano_B": {
 							"Label": "B",
 							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Anote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_C": {
+							"Label": "C",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_D": {
+							"Label": "D",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_E": {
+							"Label": "E",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_F": {
+							"Label": "F",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_G": {
+							"Label": "G",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"Cancel": {},
+					},
+				},
+				// A note
+				"{{ModId}}_MilkRoomPiano_Anote": {
+					"Question": "What note would you like to play?",
+					"ResponseEntries": {
+						"{{ModId}}_MilkRoomPiano_A": {
+							"Label": "A",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Fnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_B": {
+							"Label": "B",
+							"Actions": [
 								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
 							],
 						},
@@ -658,6 +709,105 @@
 						"Cancel": {},
 					},
 				},
+				// F note
+				"{{ModId}}_MilkRoomPiano_Fnote": {
+					"Question": "What note would you like to play?",
+					"ResponseEntries": {
+						"{{ModId}}_MilkRoomPiano_A": {
+							"Label": "A",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_B": {
+							"Label": "B",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_C": {
+							"Label": "C",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_D": {
+							"Label": "D",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_E": {
+							"Label": "E",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_F": {
+							"Label": "F",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Gnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_G": {
+							"Label": "G",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"Cancel": {},
+					},
+				},
+				// G note
+				"{{ModId}}_MilkRoomPiano_Gnote": {
+					"Question": "What note would you like to play?",
+					"ResponseEntries": {
+						"{{ModId}}_MilkRoomPiano_A": {
+							"Label": "A",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_B": {
+							"Label": "B",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_C": {
+							"Label": "C",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_D": {
+							"Label": "D",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_E": {
+							"Label": "E",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_F": {
+							"Label": "F",
+							"Actions": [
+								"mushymato.MMAP_QuestionDialogue {{ModId}}_MilkRoomPiano_Dnote",
+							],
+						},
+						"{{ModId}}_MilkRoomPiano_G": {
+							"Label": "G",
+							"Actions": [
+								"If !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomKitchenkey ## AddItem (O){{ModId}}_MilkRoomKitchenkey",
+							],
+						},
+						"Cancel": {},
+					},
+				},
+
 			},
 		},
 
