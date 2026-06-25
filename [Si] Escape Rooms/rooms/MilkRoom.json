@@ -257,15 +257,15 @@
 						"AddItem (O){{ModId}}_MilkRoomBedroomkey 1",
 					]
 				},
-				"{{ModId}}_MilkRoomGetPrizeKey": {
-					"Id": "{{ModId}}_MilkRoomGetPrizeKey",
-					"MarkActionApplied": false,
-					"Trigger": "Manual",
-					"Condition": "PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomkey, !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizekey",
-					"Actions": [
-						"AddItem (O){{ModId}}_MilkRoomPrizekey 1",
-					]
-				},
+				// "{{ModId}}_MilkRoomGetPrizeKey": {
+				// 	"Id": "{{ModId}}_MilkRoomGetPrizeKey",
+				// 	"MarkActionApplied": false,
+				// 	"Trigger": "Manual",
+				// 	"Condition": "PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomBedroomkey, !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizekey",
+				// 	"Actions": [
+				// 		"AddItem (O){{ModId}}_MilkRoomPrizekey 1",
+				// 	]
+				// },
 				// Blue couch
 				"{{ModId}}_MilkRoomBlueCouch": {
 					"Id": "{{ModId}}_MilkRoomBlueCouch",
@@ -295,6 +295,16 @@
 						"If !PLAYER_HAS_ITEM Current (O)814 ## Spiderbuttons.BETAS_Message Strings\\\\StringsFromMaps:Si.ER_MilkRoomInkMissing",
 						"If PLAYER_HAS_ITEM Current (O)814 ## AddItem (O){{ModId}}_MilkRoomToDoList",
 						"If PLAYER_HAS_ITEM Current (O)814 ## RemoveItem (O)814",
+					]
+				},
+				// Food
+				"{{ModId}}_MilkRoomFoodEaten": {
+					"Id": "{{ModId}}_MilkRoomFoodEaten",
+					"MarkActionApplied": false,
+					"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+					"Condition": "LOCATION_NAME Here {{ModId}}_MilkRoom, ITEM_ID Input (O)219", // trout soup for testing CHANGE LATER
+					"Actions": [
+						"If !PLAYER_HAS_ITEM Current (O){{ModId}}_MilkRoomPrizeKey ## AddItem (O){{ModId}}_MilkRoomPrizeKey",
 					]
 				},
 			},
@@ -835,6 +845,10 @@
 		// Table
 		// betas itemequipped + mmap mapoverride?
 		// or just UB it lol
+
+		// Food
+		// spacechase0.SpaceCore_OnItemEaten
+		// Cond 'in this room'
 
 	// End //////////////////////////////////////////////////////////
 
